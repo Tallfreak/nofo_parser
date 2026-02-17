@@ -7,8 +7,8 @@ operations. Database writes are handled by the processor layer.
 import io
 from typing import Any
 
-from openai_parser import parse_nofo_with_openai
-from logger import logger
+from .openai_parser import parse_nofo_with_openai
+from .logger import logger
 
 
 def parse(

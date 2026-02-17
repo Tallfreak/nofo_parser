@@ -1,12 +1,12 @@
 
 import tempfile
 
-from logger import logger
-import file_processing
-import nofo_parsing
-import file_system
-from grant import Grant
-from lifecycle import GrantStatus
+from .logger import logger
+from . import file_processing
+from . import nofo_parsing
+from . import file_system
+from .grant import Grant
+from .lifecycle import GrantStatus
 
 def parse(pdf_path: str):
     try:

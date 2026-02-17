@@ -3,8 +3,8 @@
 from dataclasses import dataclass
 from datetime import datetime
 
-from contact import ContactInfo
-from lifecycle import FundingCycle, GrantStatus
+from .contact import ContactInfo
+from .lifecycle import FundingCycle, GrantStatus
 
 
 @dataclass(frozen=True)

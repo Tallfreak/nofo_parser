@@ -5,7 +5,7 @@ with open('requirements.txt') as f:
 
 setup(
     name="nofo_parser_package",
-    version="0.1",
+    version="0.3",
     include_package_data=True,
     python_requires='>=3.13',
     packages=find_packages(),

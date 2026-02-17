@@ -15,7 +15,7 @@ from reportlab.lib.pagesizes import LETTER
 from reportlab.lib.utils import simpleSplit
 from reportlab.pdfgen import canvas
 
-from logger import logger
+from .logger import logger
 
 # File type magic numbers
 ZIP_MAGIC_NUMBERS = (b'PK\x03\x04', b'PK\x05\x06', b'PK\x07\x08')

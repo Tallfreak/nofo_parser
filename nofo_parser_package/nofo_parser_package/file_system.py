@@ -6,9 +6,9 @@ from typing import Any
 
 import httpx
 
-import nofo_parser
-from file_processing import pdf_from_downloaded_path
-from logger import logger
+from . import nofo_parser
+from .file_processing import pdf_from_downloaded_path
+from .logger import logger
 
 
 def download_nofo(

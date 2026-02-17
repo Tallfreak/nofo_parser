@@ -4,9 +4,9 @@ import os
 import boto3
 from botocore.exceptions import ClientError
 
-from openai_parser import add_nofo_to_vector_store
-from date_processing import to_iso
-from logger import logger
+from .openai_parser import add_nofo_to_vector_store
+from .date_processing import to_iso
+from .logger import logger
 
 S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
 AWS_ENDPOINT_URL = os.getenv('AWS_ENDPOINT_URL') or None

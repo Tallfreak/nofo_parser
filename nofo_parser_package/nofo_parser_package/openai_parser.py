@@ -5,22 +5,22 @@ from io import BytesIO
 import openai
 from dotenv import load_dotenv
 
-import award_ceiling
-import contact_info
-import eligibility_booleans
-import eligibility_requirements
-import eligible_activities
-import indirect_costs
-import key_dates
-import keywords
-import match_requirements
-import performance_start_date
-import scoring_rubric
-import summary
-import unique_aspects
-from pdfplumber_parser import pdfplumber_extract_text_from_pdf
-from file_processing import text_to_pdf_bytes
-from logger import logger
+from . import award_ceiling
+from . import contact_info
+from . import eligibility_booleans
+from . import eligibility_requirements
+from . import eligible_activities
+from . import indirect_costs
+from . import key_dates
+from . import keywords
+from . import match_requirements
+from . import performance_start_date
+from . import scoring_rubric
+from . import summary
+from . import unique_aspects
+from .pdfplumber_parser import pdfplumber_extract_text_from_pdf
+from .file_processing import text_to_pdf_bytes
+from .logger import logger
 
 load_dotenv()
 
