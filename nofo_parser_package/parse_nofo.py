@@ -11,8 +11,6 @@ from .lifecycle import GrantStatus
 
 def parse(pdf_path: str):
     try:
-        S3_BUCKET_NAME_environ = os.environ['S3_BUCKET_NAME'] or 'Not Set'
-        logger.info('S3_BUCKET_NAME_environ', S3_BUCKET_NAME_environ)
         S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME') or 'Not Set'
         logger.info('S3_BUCKET_NAME', S3_BUCKET_NAME)
 
