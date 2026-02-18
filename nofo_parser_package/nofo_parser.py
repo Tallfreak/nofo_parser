@@ -8,8 +8,8 @@ from .openai_parser import add_nofo_to_vector_store
 from .date_processing import to_iso
 from .logger import logger
 
-S3_BUCKET_NAME = os.environ.get('S3_BUCKET_NAME')
-AWS_ENDPOINT_URL = os.environ.get('AWS_ENDPOINT_URL') or None
+S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
+AWS_ENDPOINT_URL = os.getenv('AWS_ENDPOINT_URL') or None
 s3_client = boto3.client('s3', endpoint_url=AWS_ENDPOINT_URL)
 
 def upload_nofo_to_s3(file_data, nofo_file_name, latest_link_text):

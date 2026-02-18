@@ -12,7 +12,13 @@ from .lifecycle import GrantStatus
 def parse(pdf_path: str):
     try:
         S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME') or 'Not Set'
-        logger.info('S3_BUCKET_NAME', S3_BUCKET_NAME)
+        print(f'S3_BUCKET_NAME: {S3_BUCKET_NAME}')
+        AWS_ENDPOINT_URL = os.getenv('AWS_ENDPOINT_URL') or None
+        print(f'AWS_ENDPOINT_URL: {AWS_ENDPOINT_URL}')
+        OPENAI_VECTOR_STORE_ID = os.getenv('OPENAI_VECTOR_STORE_ID')    
+        print(f'OPENAI_VECTOR_STORE_ID: {OPENAI_VECTOR_STORE_ID}')
+        api_key = os.getenv('OPENAI_API_KEY')
+        print(f'OPENAI_API_KEY: {api_key}')
 
         
         logger.info('processing NOFO document', url=pdf_path)
