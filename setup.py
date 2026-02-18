@@ -8,7 +8,7 @@ setup(
 
     url='https://github.com/Tallfreak/nofo_parser',
     py_modules=['nofo_parser_package'],
-    version="0.0.17",
+    version="0.0.18",
     include_package_data=True,
     python_requires='>=3.8',
     packages=find_packages(),
