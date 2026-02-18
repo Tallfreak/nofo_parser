@@ -19,7 +19,26 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           if  [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Access environment variables
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_VECTOR_STORE_ID: ${{ secrets.OPENAI_VECTOR_STORE_ID }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+          AWS_ENDPOINT_URL: ${{ secrets.AWS_ENDPOINT_URL }}
+        run: |
+          echo "GITHUB_TOKEN is set: $GITHUB_TOKEN"
+          echo "OPENAI_API_KEY is set: $OPENAI_API_KEY"
+          echo "OPENAI_VECTOR_STORE_ID is set: $OPENAI_VECTOR_STORE_ID"
+          echo "S3_BUCKET_NAME is set: $S3_BUCKET_NAME"
+          echo "AWS_ENDPOINT_URL is set: $AWS_ENDPOINT_URL"
       - name: Build package
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          OPENAI_VECTOR_STORE_ID: ${{ secrets.OPENAI_VECTOR_STORE_ID }}
+          S3_BUCKET_NAME: ${{ secrets.S3_BUCKET_NAME }}
+          AWS_ENDPOINT_URL: ${{ secrets.AWS_ENDPOINT_URL }}
         run: |
           python setup.py sdist bdist_wheel
       - name: Publish package
