@@ -40,12 +40,12 @@ prompt_objects = [
 ]
 
 # OpenAI configuration
-OPENAI_VECTOR_STORE_ID = os.getenv('OPENAI_VECTOR_STORE_ID')
+OPENAI_VECTOR_STORE_ID = os.environ.get('OPENAI_VECTOR_STORE_ID')
 
 
 def get_openai_client():
     """Lazily initialize OpenAI client to avoid import-time initialization errors."""
-    api_key = os.getenv('OPENAI_API_KEY')
+    api_key = os.environ.get('OPENAI_API_KEY')
     if not api_key:
         raise ValueError('OPENAI_API_KEY environment variable is not set')
     return openai.OpenAI(api_key=api_key)
