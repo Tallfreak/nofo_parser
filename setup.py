@@ -5,6 +5,12 @@ with open('requirements.txt') as f:
 
 setup(
     name="nofo_parser_package",
+
+    url='https://github.com/MichaelKim0407/tutorial-pip-package',
+    author='Michael Kim',
+    author_email='mkim0407@gmail.com',
+
+    py_modules=['my_pip_package'],
     version="0.3",
     include_package_data=True,
     python_requires='>=3.13',
