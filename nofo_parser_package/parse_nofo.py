@@ -1,5 +1,6 @@
 
-import tempfile
+import tempfilei
+import os
 
 from .logger import logger
 from . import file_processing
@@ -10,6 +11,14 @@ from .lifecycle import GrantStatus
 
 def parse(pdf_path: str):
     try:
+        S3_BUCKET_NAME_get_environ = os.environ.get('S3_BUCKET_NAME')
+        logger.info('S3_BUCKET_NAME_get_environ', S3_BUCKET_NAME_get_environ)
+        S3_BUCKET_NAME_environ = os.environ['S3_BUCKET_NAME']
+        logger.info('S3_BUCKET_NAME_environ', S3_BUCKET_NAME_environ)
+        S3_BUCKET_NAME = os.getenv('S3_BUCKET_NAME')
+        logger.info('S3_BUCKET_NAME', S3_BUCKET_NAME)
+
+        
         logger.info('processing NOFO document', url=pdf_path)
 
         grant_dict = Grant('', '', '', '', '', GrantStatus.POSTED, '').__dict__
