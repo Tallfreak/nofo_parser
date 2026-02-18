@@ -31,4 +31,4 @@ jobs:
           AWS_ENDPOINT_URL: ${{ secrets.AWS_ENDPOINT_URL }}
         run: |
           pip install twine
-          python -m twine upload --repository-url https://api.github.com/orgs/${{ github.repository_owner }}/packages/pypi/upload dist/*
+          python -m twine upload --repository-url https://api.github.com/orgs/Tallfreak/packages/pypi/upload dist/*
