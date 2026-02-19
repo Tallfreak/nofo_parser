@@ -9,6 +9,7 @@ jobs:
   python-build-and-publish:
     name: Python Build and Publish
     runs-on: ubuntu-latest
+    environment: production
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python 3.8
